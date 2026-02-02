@@ -1,65 +1,61 @@
 import time
 import numpy as np
-import sys
 
-# Import Phylax Core Modules
+# Import the Sovereign Modules
 from security import SovereignSecurity
 from audit_log import SovereignLogger
+from sentinel_vision import SentinelVision  # <-- Now imports the Vision module
 
-def run_phylax_simulation():
-    print("\n==================================================")
-    print("   PHYLAX CYBERNETICS | PROJECT SENTINEL v2.0")
-    print("   Sovereign Identity Protocol | Status: ACTIVE")
-    print("==================================================\n")
+def run_sentinel_simulation():
+    print("--- INITIALIZING PHYLAX SENTINEL PROTOCOL ---")
     
-    # 1. Boot Sequence
-    print("[SYSTEM] Initializing Secure Boot...")
-    time.sleep(1)
-    
-    # Initialize Security Shield
-    shield = SovereignSecurity()
-    if not shield.verify_tpm_integrity():
-        sys.exit("[CRITICAL] TAMPER DETECTED. SYSTEM HALT.")
+    # 1. Initialize Modules
+    sec_shield = SovereignSecurity()
+    logger = SovereignLogger("Officer-442")
+    vision = SentinelVision()  # <-- Initialize the Camera
+
+    # 2. Watchlist Download (Simulated Air-Gapped Sync)
+    print("\n[SYSTEM] Downloading Daily Watchlist...")
+    # We create a fake "Target" to look for
+    fake_terrorist_face = np.random.rand(128).astype(np.float32)
+    watchlist_hash = sec_shield.generate_salted_hash(fake_terrorist_face)
+    print(f"[SYSTEM] Watchlist Loaded. Target Hash: {watchlist_hash[:8]}...")
+
+    # 3. Start The Camera
+    if vision.start_camera():
+        print("\n[FIELD] Camera Active. Scanning for subjects...")
         
-    # Initialize Logger (Officer Login)
-    # In reality, this comes from the officer's smart card
-    logger = SovereignLogger("OFFICER-ID-9924")
-    print("[SYSTEM] Officer Authenticated. Logging Active.\n")
-    
-    # 2. Watchlist Ingest (Simulation)
-    print("[NET] Mode: AIR-GAPPED (Offline)")
-    print("[DB] Loading Daily Watchlist Hash-Set...")
-    
-    # Create a fake "Target" (Terrorist) vector
-    fake_target_vector = np.random.rand(128).astype(np.float32)
-    # Hash it with today's salt (This is what the station does)
-    watchlist_hash = shield.generate_salted_hash(fake_target_vector)
-    print(f"[DB] Watchlist Loaded. Target Hash: {watchlist_hash[:12]}...\n")
-
-    # 3. Field Scan Simulation
-    print(">>> READY FOR SCAN. PRESS CAMERA BUTTON.")
-    time.sleep(1)
-    print("[CAM] Capturing Subject Biometrics...")
-    
-    # Simulate scanning an Innocent Person (Random Vector)
-    subject_vector = np.random.rand(128).astype(np.float32)
-    subject_hash = shield.generate_salted_hash(subject_vector)
-    
-    print(f"[PROCESS] Subject Hash Generated: {subject_hash[:12]}...")
-    
-    # 4. The Comparison
-    if subject_hash == watchlist_hash:
-        print("\n[ALERT] *** MATCH CONFIRMED ***")
-        print("[ALERT] INITIATE DETAINMENT PROTOCOL")
-        logger.log_scan("MATCH_CONFIRMED", "GRID-51N-01W")
+        # Capture a single frame for the demo
+        frame = vision.capture_frame()
+        
+        if frame is not None:
+            # 4. Vectorize the Face
+            vector, status = vision.get_biometric_vector(frame)
+            
+            if status == "NO_FACE_DETECTED":
+                print(">> ERROR: No subject in frame.")
+            else:
+                print(f"[VISION] Biometric Vector Acquired. Liveness Check: {vision.liveness_check(frame)}")
+                
+                # 5. Salt & Hash (The Sovereign Security Step)
+                scan_hash = sec_shield.generate_salted_hash(vector)
+                
+                # 6. Compare against Watchlist
+                if scan_hash == watchlist_hash:
+                    print(">> ALERT: MATCH FOUND!")
+                    logger.log_scan("MATCH", "GPS-51.5N-0.1W")
+                else:
+                    print(">> CLEAR: No Match.")
+                    logger.log_scan("NO_MATCH", "GPS-51.5N-0.1W")
+                
+                # 7. Secure Wipe (The Privacy Step)
+                sec_shield.secure_wipe(vector)
+        
+        vision.stop_camera()
     else:
-        print("\n[RESULT] NO MATCH. Subject Cleared.")
-        logger.log_scan("NO_MATCH", "GRID-51N-01W")
-        
-    # 5. The Secure Wipe
-    print("\n[PRIVACY] Initiating Volatile Memory Wipe...")
-    shield.secure_wipe(subject_vector)
-    print("[SYSTEM] Cycle Complete. Ready for next scan.")
+        print("[ERROR] Camera hardware not found. Aborting.")
+
+    print("\n--- SESSION COMPLETE ---")
 
 if __name__ == "__main__":
-    run_phylax_simulation()
+    run_sentinel_simulation()
