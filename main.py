@@ -1,3 +1,4 @@
+from sentinel_vision import SentinelVision
 import time
 import numpy as np
 
