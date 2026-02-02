@@ -60,3 +60,12 @@ def run_sentinel_simulation():
 
 if __name__ == "__main__":
     run_sentinel_simulation()
+# Initialize Eyes
+    eyes = SentinelVision()
+
+    # ... inside the scan loop ...
+    print("\n[FIELD] Acquiring Biometric Target...")
+    # capture a real frame (or simulated if no camera)
+    frame = eyes.capture_secure_frame()
+    # turn it into a vector
+    subject_vector = eyes.vectorize_face(frame)
