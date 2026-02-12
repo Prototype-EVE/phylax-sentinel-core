@@ -1,32 +1,12 @@
-# PHYLAX: Sovereign Identity Protocol
-### Project SENTINEL | Offline Volatile Memory Verification
+# PHYLAX: The Sovereign Integrity Protocol
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status: Prototype](https://img.shields.io/badge/Status-Research_Prototype-blue.svg)
-![Architecture: Sovereign](https://img.shields.io/badge/Architecture-Offline%20%2F%20Air--Gapped-green.svg)
-![Compliance: GDPR](https://img.shields.io/badge/Compliance-GDPR%20Privacy%20By%20Design-orange.svg)
+**Status:** Compliance Alignment (UK Cyber Security Bill 2026)  
+**Core Architecture:** RISC-V | TPM 2.0 | Volatile Edge Processing
 
-## 🛡️ Executive Summary
-**Phylax Cybernetics** presents **Project SENTINEL**: an offline-first biometric verification framework designed for zero-trust maritime environments. 
+## 🛡️ Strategic Focus: Inquiry vs. Integrity
+PHYLAX (Project SENTINEL) replaces the catastrophic costs of reactive "Public Inquiries" with hardware-enforced "Immutable Auditing." By rooting the chain of trust in the silicon, we provide a mathematical proof of system state that cannot be altered by foreign state actors or internal corruption.
 
-Unlike traditional cloud-tethered systems, this protocol utilizes **Volatile Memory (RAM)** processing to ensure that sensitive biometric data is never written to a permanent drive. It allows sovereign entities to perform identity checks against a cryptographically hashed watchlist without maintaining a mass surveillance database.
-
-> **Note:** This repository contains **Public Domain** academic research code. It is designed to be compatible with European Sovereign Supply Chains (STMicroelectronics STM32N6 / RISC-V).
-
-## ⚡ Key Architecture
-* **Air-Gapped Operation:** Functions with 0% internet connectivity.
-* **Volatile Memory Defense:** Data exists only in RAM. Power loss = Data destruction.
-* **Salted Hash Logic:** Uses daily-rotating cryptographic salts to prevent "Rainbow Table" attacks on the watchlist.
-* **Audit-Ready:** Pseudonymous logging tracks the *Officer* without tracking the *Subject*.
-
-## 🛠️ System Flow
-```mermaid
-graph LR
-    A[Camera Input] -->|Raw Frame| B(Volatile RAM)
-    B -->|Vectorize| C{Secure NPU}
-    C -->|Add Daily Salt| D[Hashed Vector]
-    D -->|Compare| E[Watchlist Database]
-    E -->|Result| F[Audit Log]
-    B -.->|Immediate Wipe| G[Null Data]
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#ccf,stroke:#f66,stroke-width:2px
+## 🇬🇧 National Security Alignment
+* **Anti-Espionage:** Hardware-level memory isolation (PMP) prevents remote-access hijacks.
+* **Tactical Enforcement:** Offline-first biometric matching for high-risk zones and KCPO enforcement.
+* **Sovereignty:** 100% auditable RTL code, eliminating dependency on "Black Box" foreign hardware.
