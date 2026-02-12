@@ -1,25 +1,27 @@
-# PHYLAX: The Sovereign Integrity Protocol
-**A Hardware-Enforced Identity Shield for National Security**
+# 🛡️ PHYLAX Hardware-Root-of-Trust (RoT)
+**Level:** Sovereign Tier 1 (Strategic Infrastructure)
 
-## 🛡️ Strategic Mission: Integrity over Inquiry
-PHYLAX (Project SENTINEL) replaces the catastrophic costs of reactive "Public Inquiries" with hardware-enforced accountability. 
+## 🏛️ Purpose
+This directory contains the low-level logic that bridges the PHYLAX software to the physical silicon. By rooting our security in the hardware, we eliminate the "Sovereignty Gap" created by foreign-managed cloud dependencies and opaque "Black Box" chips.
 
-| Feature | Reactive (Traditional) | Proactive (PHYLAX) |
-| :--- | :--- | :--- |
-| **Cost** | **£10M – £150M+** per Inquiry | **£550,000** Pilot Phase |
-| **Integrity** | "Soft" logs (editable) | Hardware-rooted (Immutable) |
-| **Resolution** | Years of litigation | Instant mathematical proof |
+## 🔑 Core Technical Protocols
 
-## 🇬🇧 UK Regulatory Alignment
-Designed to operationalize the **2026 Cyber Security and Resilience Bill**, SENTINEL provides:
-* **Supply Chain Transparency:** Auditable RISC-V silicon (No "Black Box" foreign hardware).
-* **Operational Resilience:** 100% "Offline-First" functionality for maritime and "dead zone" enforcement.
-* **Privacy by Design:** "Verify & Discard" protocol purges biometrics in <0.5s (UK GDPR Compliant).
+### 1. RISC-V Open-Standard Auditability
+Unlike proprietary x86 or ARM architectures, our use of RISC-V allows the UK Government (NCSC) to perform a full **RTL (Register Transfer Level) Inspection**. 
+* **Zero Backdoors:** We can mathematically prove that no hidden foreign "kill switches" exist in the silicon.
 
-## 📂 Project Architecture
-* **/docs**: Strategic briefings for UK Parliament and stakeholders.
-* **/hardware**: C-level protocols for TPM 2.0 Attestation and Volatile Memory wiping.
-* **/src**: Core Edge AI and identity matching engines.
+### 2. TPM 2.0 Measured Boot
+Utilizing the **Trusted Platform Module (TPM)**, every stage of the device's startup is measured. 
+* **Immutable Chain of Trust:** If a device is physically tampered with or the OS is altered, the hardware-rooted "Locker" refuses to open, protecting sensitive watchlist data.
+
+### 3. Physical Memory Protection (PMP)
+We utilize RISC-V's PMP to "fence off" the identity matching protocol. 
+* **Isolation:** Even if a network-connected component is compromised, the attacker is physically blocked from accessing the biometric memory space.
+
+## 📂 Directory Contents
+* `volatile_wipe.c`: The "Verify & Discard" logic that purges RAM in <0.5s.
+* `tpm_attestation.c`: Generates signed "Cryptographic Quotes" to prove system integrity.
+* `pmp_config.h`: Header files defining the physical boundaries for memory isolation.
 
 ---
-*Phylax Cybernetics: Advancing Digital Sovereignty for a Secure Future.*
+**Compliance Note:** This architecture satisfies the "Supply Chain Auditability" and "Operational Resilience" mandates of the **UK Cyber Security and Resilience Bill 2026**.
