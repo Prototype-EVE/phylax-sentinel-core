@@ -1,4 +1,6 @@
-# 🛡️ PHYLAX Hardware-Root-of-Trust (RoT)
+![Status: Sovereign Pilot Ready](https://img.shields.io/badge/Status-Sovereign_Pilot_Ready-green)
+![Compliance: UK Cyber Bill 2026](https://img.shields.io/badge/Compliance-UK_Cyber_Bill_2026-blue)
+![Architecture: RISC--V](https://img.shields.io/badge/Architecture-RISC--V-orange)# 🛡️ PHYLAX Hardware-Root-of-Trust (RoT)
 **Level:** Sovereign Tier 1 (Strategic Infrastructure)
 
 ## 🏛️ Purpose
