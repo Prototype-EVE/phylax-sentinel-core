@@ -1,12 +1,25 @@
 # PHYLAX: The Sovereign Integrity Protocol
+**A Hardware-Enforced Identity Shield for National Security**
 
-**Status:** Compliance Alignment (UK Cyber Security Bill 2026)  
-**Core Architecture:** RISC-V | TPM 2.0 | Volatile Edge Processing
+## 🛡️ Strategic Mission: Integrity over Inquiry
+PHYLAX (Project SENTINEL) replaces the catastrophic costs of reactive "Public Inquiries" with hardware-enforced accountability. 
 
-## 🛡️ Strategic Focus: Inquiry vs. Integrity
-PHYLAX (Project SENTINEL) replaces the catastrophic costs of reactive "Public Inquiries" with hardware-enforced "Immutable Auditing." By rooting the chain of trust in the silicon, we provide a mathematical proof of system state that cannot be altered by foreign state actors or internal corruption.
+| Feature | Reactive (Traditional) | Proactive (PHYLAX) |
+| :--- | :--- | :--- |
+| **Cost** | **£10M – £150M+** per Inquiry | **£550,000** Pilot Phase |
+| **Integrity** | "Soft" logs (editable) | Hardware-rooted (Immutable) |
+| **Resolution** | Years of litigation | Instant mathematical proof |
 
-## 🇬🇧 National Security Alignment
-* **Anti-Espionage:** Hardware-level memory isolation (PMP) prevents remote-access hijacks.
-* **Tactical Enforcement:** Offline-first biometric matching for high-risk zones and KCPO enforcement.
-* **Sovereignty:** 100% auditable RTL code, eliminating dependency on "Black Box" foreign hardware.
+## 🇬🇧 UK Regulatory Alignment
+Designed to operationalize the **2026 Cyber Security and Resilience Bill**, SENTINEL provides:
+* **Supply Chain Transparency:** Auditable RISC-V silicon (No "Black Box" foreign hardware).
+* **Operational Resilience:** 100% "Offline-First" functionality for maritime and "dead zone" enforcement.
+* **Privacy by Design:** "Verify & Discard" protocol purges biometrics in <0.5s (UK GDPR Compliant).
+
+## 📂 Project Architecture
+* **/docs**: Strategic briefings for UK Parliament and stakeholders.
+* **/hardware**: C-level protocols for TPM 2.0 Attestation and Volatile Memory wiping.
+* **/src**: Core Edge AI and identity matching engines.
+
+---
+*Phylax Cybernetics: Advancing Digital Sovereignty for a Secure Future.*
