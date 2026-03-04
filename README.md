@@ -47,3 +47,23 @@ Zero Hackable Target: By processing biometrics in volatile memory and deleting n
 ---
 
 **Compliance Note:** This architecture satisfies the Supply Chain Auditability and "Operational Resilience" mandates of the **UK Cyber Security and Resilience Bill 2026**.
+---
+
+## ⚠️ Technical Architecture Disclaimer: Cloud Independence
+
+### **The "Zero-Cloud" Mandate**
+Project SENTINEL intentionally avoids the integration of any US-based Cloud APIs (including but not limited to OpenAI, Anthropic, Google Cloud, or AWS) for core biometric processing and decision-making. 
+
+### **Rationale: Mitigation of Jurisdictional Risk**
+This architecture is a response to the following identified security threats:
+
+1. **Regulatory Capture & Data Seizure:** US-based entities are subject to the **Foreign Intelligence Surveillance Act (FISA)** and the **CLOUD Act**. These legal frameworks allow for the silent seizure of data and the forced implementation of "backdoors" under National Security Letters (NSLs) that carry gag orders.
+2. **Operational Continuity:** Reliance on third-party APIs introduces a **Central Point of Failure**. If a provider terminates a service due to shifting political or corporate policies, the security infrastructure of Project SENTINEL remains unaffected.
+3. **Supply Chain Integrity:** By executing on **Local Silicon (Apple M-Series Secure Enclave)**, the attack surface is reduced to the physical hardware in the user's possession, eliminating "Man-in-the-Middle" risks inherent in cloud-based inference.
+
+
+
+### **Statement of Intent**
+Project SENTINEL is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
+
+---
