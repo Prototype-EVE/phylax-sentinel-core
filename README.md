@@ -27,7 +27,7 @@ We utilize RISC-V's PMP to "fence off" the identity matching protocol.
 * `tpm_attestation.c`: Generates signed "Cryptographic Quotes" to prove system integrity.
 * `pmp_config.h`: Header files defining the physical boundaries for memory isolation.
 ## 📊 Fiscal Displacement: Inquiry vs. Integrity
-Project SENTINEL represents a transition from **sunk operational expenses** to a **permanent national security asset**[cite: 5, 58]. By investing in sovereign infrastructure, the UK can displace the catastrophic costs of reactive data failures and public inquiries.
+Project SENTINEL represents a transition from **sunk operational expenses** to a **permanent national security asset**. By investing in sovereign infrastructure, the UK can displace the catastrophic costs of reactive data failures and public inquiries.
 
 | Category | Current Reactive Model (Sunk Cost) | SENTINEL Sovereign Solution (Asset) |
 | :--- | :--- | :--- |
