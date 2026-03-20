@@ -3,7 +3,6 @@
 ![Architecture: RISC--V](https://img.shields.io/badge/Architecture-RISC--V-orange)
 
 ## 🛡️ PHYLAX Hardware-Root-of-Trust (RoT)
-**Level:** Sovereign Tier 1 (Strategic Infrastructure)
 
 ## 🏛️ Purpose
 This directory contains the low-level logic that bridges the PHYLAX software to the physical silicon. By rooting our security in the hardware, we eliminate the "Sovereignty Gap" created by foreign-managed cloud dependencies and opaque "Black Box" chips.
