@@ -2,10 +2,10 @@
 ![Compliance: UK Cyber Bill 2026](https://img.shields.io/badge/Compliance-UK_Cyber_Bill_2026-blue)
 ![Architecture: RISC--V](https://img.shields.io/badge/Architecture-RISC--V-orange)
 
-## 🛡️ PHYLAX Hardware-Root-of-Trust (RoT)
+## 🛡️ SENTINEL Hardware-Root-of-Trust (RoT)
 
 ## 🏛️ Purpose
-This directory contains the low-level logic that bridges the PHYLAX software to the physical silicon. By rooting our security in the hardware, we eliminate the "Sovereignty Gap" created by foreign-managed cloud dependencies and opaque "Black Box" chips.
+This directory contains the low-level logic that bridges the SENTINEL software to the physical silicon. By rooting our security in the hardware, we eliminate the Sovereignty Gap created by foreign-managed cloud dependencies and opaque Black Box chips.
 
 ## 🔑 Core Technical Protocols
 
@@ -63,7 +63,7 @@ This architecture is a response to the following identified security threats:
 
 
 ### **Statement of Intent**
-Project PHYLAX is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
+Project SENTINEL is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
 
 ---
 ##Manufacturing Readiness Level (MRL)
