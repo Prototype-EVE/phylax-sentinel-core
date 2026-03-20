@@ -27,9 +27,9 @@ We utilize RISC-V's PMP to "fence off" the identity matching protocol.
 * `tpm_attestation.c`: Generates signed "Cryptographic Quotes" to prove system integrity.
 * `pmp_config.h`: Header files defining the physical boundaries for memory isolation.
 ## 📊 Fiscal Displacement: Inquiry vs. Integrity
-Project SENTINEL represents a transition from **sunk operational expenses** to a **permanent national security asset**. By investing in sovereign infrastructure, the UK can displace the catastrophic costs of reactive data failures and public inquiries.
+Project PHYLAX represents a transition from **sunk operational expenses** to a **permanent national security asset**. By investing in sovereign infrastructure, the UK can displace the catastrophic costs of reactive data failures and public inquiries.
 
-| Category | Current Reactive Model (Sunk Cost) | SENTINEL Sovereign Solution (Asset) |
+| Category | Current Reactive Model (Sunk Cost) | PHYLAX Sovereign Solution (Asset) |
 | :--- | :--- | :--- |
 | **Annual Budget Impact** | **£2.9 Billion+** (Asylum Management) | **£550,000** (Full Pilot Phase)|
 | **Primary Unit Cost** | ~£150 per person / day | ~£1,800 per device (One-time) |
@@ -40,7 +40,7 @@ Project SENTINEL represents a transition from **sunk operational expenses** to a
 
 ## 💡 The Sovereign Shield Value Proposition
 Fiscal Efficiency: For the cost of housing roughly **10 migrants for one year**, the government can fund a full-scale Sovereign Pilot.
-Resilience by Design: While cloud-based systems fail during network blackouts or cable cuts, SENTINEL's Offline-First architecture ensures the border remains functional under total isolation.
+Resilience by Design: While cloud-based systems fail during network blackouts or cable cuts, PHYLAX's Offline-First architecture ensures the border remains functional under total isolation.
 
 Zero Hackable Target: By processing biometrics in volatile memory and deleting non-matches in <0.5 seconds, we eliminate the massive strategic target for foreign state-sponsored hackers.
 
@@ -64,6 +64,6 @@ This architecture is a response to the following identified security threats:
 
 
 ### **Statement of Intent**
-Project SENTINEL is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
+Project PHYLAX is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
 
 ---
