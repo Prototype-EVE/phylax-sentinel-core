@@ -67,3 +67,4 @@ This architecture is a response to the following identified security threats:
 Project PHYLAX is developed as a **Sovereign Security Tool**. Our commitment to **Privacy-by-Design** dictates that "Intelligence" must never come at the cost of "Anonymity." We do not "rent" our logic; we own it.
 
 ---
+##Manufacturing Readiness Level (MRL)
